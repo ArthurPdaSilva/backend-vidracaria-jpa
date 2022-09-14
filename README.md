@@ -18,7 +18,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 
 
-## Autor
+## Autores
 
 <table>
     <td align="center"><a href="https://github.com/wesleysousaa"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/47366440?v=4" width="100px;"           alt=""/><br /><sub><b>Wesley Alencar</b></sub></a><br /><a href="https://github.com/wesleysousaa" title="Wesley Alencar">👨‍🚀</a>
