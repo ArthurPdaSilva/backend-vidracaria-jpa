@@ -1,6 +1,25 @@
 # Painel - Projeto Back-end Vidraçaria
 Criação de um sistema back end usando hipernate, mysql e java
 
+## Descrição do projeto
+
+<p>Projeto criado para a realização da disciplina de Banco de Dados 2.</p>
+
+## Status do projeto
+
+<h4> 🚧  Projeto em construção 🚀 Em constante construção...  🚧 </h4>
+
+## Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Java]
+- [MySQL]
+
+
+
+## Autor
+
 <table>
     <td align="center"><a href="https://github.com/wesleysousaa"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/47366440?v=4" width="100px;"           alt=""/><br /><sub><b>Wesley Alencar</b></sub></a><br /><a href="https://github.com/wesleysousaa" title="Wesley Alencar">👨‍🚀</a>
     </td>
@@ -8,3 +27,7 @@ Criação de um sistema back end usando hipernate, mysql e java
     </td>
   </tr>
 </table>
+
+## Licença
+
+[MIT](LICENSE)
