@@ -1,4 +1,4 @@
-# backend-vidracaria-jpa
+# Painel - Projeto Back-end Vidraçaria
 Criação de um sistema back end usando hipernate, mysql e java
 
 <table>
