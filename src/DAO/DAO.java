@@ -5,7 +5,7 @@ public abstract class DAO {
 	static EntityManagerFactory emf;
 
 	static {
-		emf = Persistence.createEntityManagerFactory("dac");
+		emf = Persistence.createEntityManagerFactory("bd_vidracaria");
 	}
 
 	protected EntityManager getEntityManager() {

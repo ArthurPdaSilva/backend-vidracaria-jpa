@@ -6,7 +6,10 @@
 	<persistence-unit name="bd_vidracaria" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-		<class></class>
+		<class>br.com.bdii.entities.Acessorios</class>
+		<class>br.com.bdii.entities.Empregado</class>
+		<class>br.com.bdii.entities.Possui</class>
+		<class>br.com.bdii.entities.Servico</class>
 
 		<properties>
 
