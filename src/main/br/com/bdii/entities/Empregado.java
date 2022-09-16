@@ -12,10 +12,7 @@ import jakarta.persistence.Id;
 @Entity(name = "EMPREGADO")
 public class Empregado implements Serializable{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -1248300065969730035L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
