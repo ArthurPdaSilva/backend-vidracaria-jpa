@@ -1,4 +1,4 @@
-package DAO;
+package br.com.bdii.dao;
 
 public class PossuiDAO {
 

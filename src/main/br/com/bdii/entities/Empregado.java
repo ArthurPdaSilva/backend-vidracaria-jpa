@@ -9,7 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.UniqueConstraint;
 
-@Entity(name = "EMPREGADO")
+//@Entity(name = "EMPREGADO")
 public class Empregado {
 
 	@Id
@@ -35,5 +35,6 @@ public class Empregado {
 	
 	@Column(nullable = false, name = "TIPO_EMPREGADO")
 	private String tipo;
+	
 	
 }

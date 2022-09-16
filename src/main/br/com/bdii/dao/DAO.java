@@ -1,4 +1,8 @@
-package DAO;
+package br.com.bdii.dao;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
 public abstract class DAO {
 
