@@ -3,14 +3,21 @@ package br.com.bdii.entities;
 import java.io.Serializable;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity(name = "ENDERECO")
 public class Endereco implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private int idCliente;
+	@EmbeddedId
+	@ManyToOne
+	@JoinColumn
+	private Cliente idCliente;
 	
 	@Column(nullable = false, name = "CIDADE")
 	private String cidade;
@@ -21,7 +28,7 @@ public class Endereco implements Serializable {
 	@Column(nullable = false, name = "BAIRRO")
 	private String bairro;
 	
-	@Column(nullable = false, name = "CEP")
+	@Column(nullable = false, name = "CEP", length = 8)
 	private String cep;
 	
 	@Column(nullable = true, name = "COMPLEMENTO")
@@ -29,11 +36,13 @@ public class Endereco implements Serializable {
 	
 	public Endereco() {}
 
-	public int getIdCliente() {
+
+
+	public Cliente getIdCliente() {
 		return idCliente;
 	}
 
-	public void setIdCliente(int idCliente) {
+	public void setIdCliente(Cliente idCliente) {
 		this.idCliente = idCliente;
 	}
 
