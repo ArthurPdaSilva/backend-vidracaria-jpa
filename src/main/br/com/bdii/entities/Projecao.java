@@ -8,6 +8,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 @Embeddable
 @Entity(name = "Projecao")
@@ -20,7 +23,9 @@ public class Projecao implements Serializable {
 	@Column(name = "ID_PROJECAO")
 	private int idProjecao;
 	
-	private int idEmpregado;
+	@OneToOne
+	@JoinColumn
+	private Empregado idEmpregado;
 	
 	@Column(nullable = false, name = "PRECO_DA_FABRICA")
 	private String precoDaFabrica;
@@ -38,11 +43,11 @@ public class Projecao implements Serializable {
 		this.idProjecao = idProjecao;
 	}
 
-	public int getIdEmpregado() {
+	public Empregado getIdEmpregado() {
 		return idEmpregado;
 	}
 
-	public void setIdEmpregado(int idEmpregado) {
+	public void setIdEmpregado(Empregado idEmpregado) {
 		this.idEmpregado = idEmpregado;
 	}
 
