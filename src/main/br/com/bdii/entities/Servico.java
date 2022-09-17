@@ -61,11 +61,13 @@ public class Servico implements Serializable{
 	
 	public Servico() {}
 	
-	public int getIdServico() {
+
+
+	public Servico getIdServico() {
 		return idServico;
 	}
 
-	public void setIdServico(int idServico) {
+	public void setIdServico(Servico idServico) {
 		this.idServico = idServico;
 	}
 
