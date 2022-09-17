@@ -2,21 +2,34 @@ package br.com.bdii.entities;
 
 import java.io.Serializable;
 
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 
 @Entity(name = "POSSUI")
 public class Possui implements Serializable{
 
 	private static final long serialVersionUID = -1593794658322272360L;
-
-	// FK's serão implementadas posteriormente
 	
+	@EmbeddedId
+	@ManyToMany
+	@JoinColumn
 	private Servico idServico;
+	
+	@EmbeddedId
+	@ManyToMany
+	@JoinColumn
 	private Empregado idEmpregado;
 	
+	@EmbeddedId
+	@ManyToMany
+	@JoinColumn
 	private Cliente idCliente;
 	
+	@EmbeddedId
+	@ManyToMany
+	@JoinColumn
 	private Acessorio idAcessorio;
 
 	public Possui() {}

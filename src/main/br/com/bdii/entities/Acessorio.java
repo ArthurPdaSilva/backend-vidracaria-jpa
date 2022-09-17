@@ -3,11 +3,13 @@ package br.com.bdii.entities;
 import java.io.Serializable;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+@Embeddable
 @Entity(name = "ACESSORIOS")
 public class Acessorio implements Serializable{
 
