@@ -5,6 +5,8 @@ import java.sql.Date;
 
 import br.com.bdii.enumerables.Status;
 import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -16,20 +18,21 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
-
+@Embeddable
 @Entity
 public class Servico implements Serializable{
 
 	private static final long serialVersionUID = 5038928811975421403L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@EmbeddedId
 	private int idServico;
 	
+	@EmbeddedId
 	@ManyToMany
 	@JoinColumn(name = "ID_EMPREGADO")
 	private Empregado idEmpregado;
 	
+	@EmbeddedId
 	@ManyToMany
 	@JoinColumn(name = "ID_CLIENTE")
 	private Cliente idCliente;
@@ -46,8 +49,8 @@ public class Servico implements Serializable{
 	@Column(nullable = false , name = "DATA_SERVICO")
 	private Date data;
 	
-	// ver o tipo e configs
-	private String Medidas_do_local;
+	@Column(nullable = false , name = "MEDIDAS_LOCAL")
+	private float Medidas_do_local;
 	
 	@Column(nullable = false, name = "PRECO_DE_FABRICA")
 	private float precoDeFabrica;
@@ -79,14 +82,6 @@ public class Servico implements Serializable{
 
 	public void setData(Date data) {
 		this.data = data;
-	}
-
-	public String getMedidas_do_local() {
-		return Medidas_do_local;
-	}
-
-	public void setMedidas_do_local(String medidas_do_local) {
-		Medidas_do_local = medidas_do_local;
 	}
 
 	public float getPrecoDeFabrica() {
@@ -129,5 +124,16 @@ public class Servico implements Serializable{
 		this.idProjecao = idProjecao;
 	}
 
-	
+	public float getMedidas_do_local() {
+		return Medidas_do_local;
+	}
+
+	public void setMedidas_do_local(float medidas_do_local) {
+		Medidas_do_local = medidas_do_local;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 }
