@@ -3,6 +3,7 @@ package br.com.bdii.entities;
 import java.io.Serializable;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
 
 @Entity(name = "POSSUI")
 public class Possui implements Serializable{
@@ -10,48 +11,46 @@ public class Possui implements Serializable{
 	private static final long serialVersionUID = -1593794658322272360L;
 
 	// FK's serão implementadas posteriormente
-	private int idServico;
 	
-	private int idEmpregado;
+	private Servico idServico;
+	private Empregado idEmpregado;
 	
-	private int idCliente;
+	private Cliente idCliente;
 	
-	private int idAcessorio;
+	private Acessorio idAcessorio;
 
 	public Possui() {}
-	
-	public int getIdServico() {
+
+	public Servico getIdServico() {
 		return idServico;
 	}
 
-	public void setIdServico(int idServico) {
+	public void setIdServico(Servico idServico) {
 		this.idServico = idServico;
 	}
 
-	public int getIdEmpregado() {
+	public Empregado getIdEmpregado() {
 		return idEmpregado;
 	}
 
-	public void setIdEmpregado(int idEmpregado) {
+	public void setIdEmpregado(Empregado idEmpregado) {
 		this.idEmpregado = idEmpregado;
 	}
 
-	public int getIdCliente() {
+	public Cliente getIdCliente() {
 		return idCliente;
 	}
 
-	public void setIdCliente(int idCliente) {
+	public void setIdCliente(Cliente idCliente) {
 		this.idCliente = idCliente;
 	}
 
-	public int getIdAcessorio() {
+	public Acessorio getIdAcessorio() {
 		return idAcessorio;
 	}
 
-	public void setIdAcessorio(int idAcessorio) {
+	public void setIdAcessorio(Acessorio idAcessorio) {
 		this.idAcessorio = idAcessorio;
 	}
-	
-	
 
 }
