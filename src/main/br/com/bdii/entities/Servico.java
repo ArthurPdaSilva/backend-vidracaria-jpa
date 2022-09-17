@@ -8,6 +8,11 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
@@ -16,14 +21,19 @@ public class Servico implements Serializable{
 
 	private static final long serialVersionUID = 5038928811975421403L;
 
-	// FK's serão projetadas posteriormente
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int idServico;
+	
 	
 	private int idEmpregado;
 	
+	
 	private int idCliente;
 	
-	private int idProjecao;
+	@OneToOne
+	@JoinColumn(name = "ID_PREJECAO")
+	private Projecao idProjecao;
 	
 	@Column(nullable = false , name = "STATUS_SERVICO")
 	@Enumerated(EnumType.STRING)
