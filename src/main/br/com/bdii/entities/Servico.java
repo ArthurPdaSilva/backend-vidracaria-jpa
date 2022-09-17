@@ -10,6 +10,8 @@ import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
@@ -23,6 +25,7 @@ public class Servico implements Serializable{
 	private static final long serialVersionUID = 5038928811975421403L;
 
 	@EmbeddedId
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int idServico;
 	
 	@EmbeddedId
