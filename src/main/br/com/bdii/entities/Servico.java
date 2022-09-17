@@ -26,7 +26,7 @@ public class Servico implements Serializable{
 
 	@EmbeddedId
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private int idServico;
+	private Servico idServico;
 	
 	@EmbeddedId
 	@ManyToMany
