@@ -10,6 +10,11 @@
 		<class>br.com.bdii.entities.Empregado</class>
 		<class>br.com.bdii.entities.Possui</class>
 		<class>br.com.bdii.entities.Servico</class>
+		<class>br.com.bdii.entities.Endereco</class>
+		<class>br.com.bdii.entities.Telefone</class>
+		<class>br.com.bdii.entities.Projecao</class>
+		<class>br.com.bdii.entities.Cliente</class>
+
 
 		<properties>
 

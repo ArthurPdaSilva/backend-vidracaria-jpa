@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -25,11 +26,13 @@ public class Servico implements Serializable{
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int idServico;
 	
+	@ManyToMany
+	@JoinColumn(name = "ID_EMPREGADO")
+	private Empregado idEmpregado;
 	
-	private int idEmpregado;
-	
-	
-	private int idCliente;
+	@ManyToMany
+	@JoinColumn(name = "ID_CLIENTE")
+	private Cliente idCliente;
 	
 	@OneToOne
 	@JoinColumn(name = "ID_PREJECAO")
@@ -60,30 +63,6 @@ public class Servico implements Serializable{
 
 	public void setIdServico(int idServico) {
 		this.idServico = idServico;
-	}
-
-	public int getIdEmpregado() {
-		return idEmpregado;
-	}
-
-	public void setIdEmpregado(int idEmpregado) {
-		this.idEmpregado = idEmpregado;
-	}
-
-	public int getIdCliente() {
-		return idCliente;
-	}
-
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
-	}
-
-	public int getIdProjecao() {
-		return idProjecao;
-	}
-
-	public void setIdProjecao(int idProjecao) {
-		this.idProjecao = idProjecao;
 	}
 
 	public Status getStatus() {
@@ -124,6 +103,30 @@ public class Servico implements Serializable{
 
 	public void setQuantidadeVidros(int quantidadeVidros) {
 		this.quantidadeVidros = quantidadeVidros;
+	}
+
+	public Empregado getIdEmpregado() {
+		return idEmpregado;
+	}
+
+	public void setIdEmpregado(Empregado idEmpregado) {
+		this.idEmpregado = idEmpregado;
+	}
+
+	public Cliente getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(Cliente idCliente) {
+		this.idCliente = idCliente;
+	}
+
+	public Projecao getIdProjecao() {
+		return idProjecao;
+	}
+
+	public void setIdProjecao(Projecao idProjecao) {
+		this.idProjecao = idProjecao;
 	}
 
 	
