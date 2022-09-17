@@ -5,26 +5,27 @@ import java.io.Serializable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 
-@Entity(name = "ENDERECO")
+@Entity(name = "Endereco")
 public class Endereco implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	private int idCliente;
 	
-	@Column(nullable = false, name = "CIDADE")
+	@Column(nullable = false)
 	private String cidade;
 	
-	@Column(nullable = false, name = "RUA")
+	@Column(nullable = false)
 	private String rua;
 	
-	@Column(nullable = false, name = "BAIRRO")
+	@Column(nullable = false)
 	private String bairro;
 	
-	@Column(nullable = false, name = "CEP")
+	@Column(nullable = false)
 	private String cep;
 	
-	@Column(nullable = true, name = "COMPLEMENTO")
+	private int numero;
+	
 	private String complemento;
 	
 	public Endereco() {}
@@ -67,6 +68,14 @@ public class Endereco implements Serializable {
 
 	public void setCep(String cep) {
 		this.cep = cep;
+	}
+	
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
 	}
 
 	public String getComplemento() {

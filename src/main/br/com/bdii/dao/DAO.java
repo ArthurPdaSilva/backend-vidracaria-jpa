@@ -17,8 +17,7 @@ public abstract class DAO {
 	}
 
 	public void close() {
-		if (emf.isOpen()) {
-			emf.close();
-		}
+		if (emf.isOpen()) emf.close();
 	}
+	
 }

@@ -6,7 +6,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity(name = "TELEFONE")
+@Entity(name = "Telefone")
 public class Telefone implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -14,7 +14,7 @@ public class Telefone implements Serializable {
 	private int idCliente;
 	
 	@Id
-	@Column(nullable = false, name = "NUMERO")
+	@Column(nullable = false, name = "numero")
 	private String numero;
 	
 	public Telefone() {}

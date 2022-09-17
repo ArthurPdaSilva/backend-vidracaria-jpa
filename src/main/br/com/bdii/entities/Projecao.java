@@ -15,15 +15,15 @@ public class Projecao implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(name = "ID_PROJECAO")
+	@Column(name = "id_projecao")
 	private int idProjecao;
 	
 	private int idEmpregado;
 	
-	@Column(nullable = false, name = "PRECO_DA_FABRICA")
-	private String precoDaFabrica;
+	@Column(nullable = false, name = "preco_da_fabrica", scale = 2)
+	private Float precoDaFabrica;
 	
-	@Column(nullable = false, name = "QUANTIDADE_DE_VIDROS")
+	@Column(nullable = false, name = "quantidade_de_vidros")
 	private int quantidadeDeVidros;
 	
 	public Projecao() {}
@@ -44,11 +44,11 @@ public class Projecao implements Serializable {
 		this.idEmpregado = idEmpregado;
 	}
 
-	public String getPrecoDaFabrica() {
+	public Float getPrecoDaFabrica() {
 		return precoDaFabrica;
 	}
 
-	public void setPrecoDaFabrica(String precoDaFabrica) {
+	public void setPrecoDaFabrica(Float precoDaFabrica) {
 		this.precoDaFabrica = precoDaFabrica;
 	}
 
@@ -59,5 +59,5 @@ public class Projecao implements Serializable {
 	public void setQuantidadeDeVidros(int quantidadeDeVidros) {
 		this.quantidadeDeVidros = quantidadeDeVidros;
 	}
-	
+
 }
