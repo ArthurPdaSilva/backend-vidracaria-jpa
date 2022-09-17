@@ -12,12 +12,12 @@ import jakarta.persistence.Id;
 @Entity(name = "EMPREGADO")
 public class Empregado implements Serializable{
 
-	private static final long serialVersionUID = -1248300065969730035L;
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "ID_EMPREGADO")
-	private int id;
+	private int idEmpregado;
 	
 	@Column(nullable = false, name = "NOME_EMPREGADO", length = 120)
 	private String nome;
@@ -40,12 +40,12 @@ public class Empregado implements Serializable{
 
 	public Empregado() {}
 	
-	public int getId() {
-		return id;
+	public int getIdEmpregado() {
+		return idEmpregado;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdEmpregado(int idEmpregado) {
+		this.idEmpregado = idEmpregado;
 	}
 
 	public String getNome() {
