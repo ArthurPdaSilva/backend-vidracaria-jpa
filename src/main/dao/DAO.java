@@ -1,15 +1,15 @@
 package dao;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public abstract class DAO {
 
 	static EntityManagerFactory emf;
 
 	static {
-		emf = Persistence.createEntityManagerFactory("bd_vidracaria");
+		emf = Persistence.createEntityManagerFactory("vidracaria");
 	}
 
 	protected EntityManager getEntityManager() {

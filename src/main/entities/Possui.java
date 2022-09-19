@@ -2,34 +2,34 @@ package entities;
 
 import java.io.Serializable;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 
 @Entity(name = "POSSUI")
 public class Possui implements Serializable{
 
 	private static final long serialVersionUID = -1593794658322272360L;
 	
-	@EmbeddedId
 	@ManyToMany
 	@JoinColumn
+	@EmbeddedId
 	private Servico idServico;
 	
-	@EmbeddedId
 	@ManyToMany
 	@JoinColumn
+	@EmbeddedId
 	private Empregado idEmpregado;
 	
-	@EmbeddedId
 	@ManyToMany
 	@JoinColumn
+	@EmbeddedId
 	private Cliente idCliente;
 	
-	@EmbeddedId
 	@ManyToMany
 	@JoinColumn
+	@EmbeddedId
 	private Acessorio idAcessorio;
 
 	public Possui() {}
