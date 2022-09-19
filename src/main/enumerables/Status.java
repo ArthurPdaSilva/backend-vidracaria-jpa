@@ -1,4 +1,4 @@
-package br.com.bdii.enumerables;
+package enumerables;
 
 public enum Status {
 

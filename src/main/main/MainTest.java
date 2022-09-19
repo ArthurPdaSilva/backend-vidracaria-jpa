@@ -1,15 +1,15 @@
-package br.com.bdii.main;
+package main;
 
-import br.com.bdii.dao.ClienteDAO;
-import br.com.bdii.entities.Cliente;
+import dao.ClienteDAO;
+import entities.Cliente;
 
-public class MainTeste {
+public class MainTest {
 
 	public static void main(String[] args) {
-		// àrea de testes
-
-		ClienteDAO cDao = new ClienteDAO();
+		// TODO Auto-generated method stub
+		
 		Cliente c = new Cliente();
+		ClienteDAO cDao = new ClienteDAO();
 		c.setCpf("12345678901");
 		c.setEmail("teste@rotimei.com");
 		c.setNome("patricio");
@@ -19,7 +19,6 @@ public class MainTeste {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 }

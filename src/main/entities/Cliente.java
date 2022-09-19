@@ -1,4 +1,4 @@
-package br.com.bdii.entities;
+package entities;
 
 import java.io.Serializable;
 

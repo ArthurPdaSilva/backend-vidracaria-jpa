@@ -1,8 +1,8 @@
-package br.com.bdii.dao;
+package dao;
 
 import java.util.List;
 
-import br.com.bdii.entities.Cliente;
+import entities.Cliente;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;

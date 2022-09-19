@@ -1,4 +1,4 @@
-package br.com.bdii.dao;
+package dao;
 
 public class ProjecaoDAO {
 

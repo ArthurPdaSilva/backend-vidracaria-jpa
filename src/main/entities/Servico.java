@@ -1,9 +1,9 @@
-package br.com.bdii.entities;
+package entities;
 
 import java.io.Serializable;
 import java.sql.Date;
 
-import br.com.bdii.enumerables.Status;
+import enumerables.Status;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EmbeddedId;
