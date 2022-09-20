@@ -18,11 +18,20 @@
 
 		<properties>
 
+			<!-- Database PostgreSQL-->
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/teste" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="789987789" />
+			<!-- /Database PostgreSQL-->
+			
 			<!-- Database MySQL-->
+			<!--
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bd_vidracaria?useSSL=false&amp;serverTimezone=GMT-3" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="" />
+			-->
 			<!-- /Database MySQL-->
 		
 			<!-- HIBERNATE -->
@@ -35,10 +44,17 @@
 			<!-- /Configuração Hibernate -->
 			
 			<!-- Configuração Hibernate SGBD MySQL -->
+			<!--
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57InnoDBDialect" />
 			<property name="hibernate.default_catalog" value="dac" />
+			-->
 			<!-- /Configuração Hibernate SGBD MySQL -->
 
+			<!-- Configuração Hibernate SGBD PostgreSQL -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect" />
+			<property name="hibernate.default_schema" value="public" />
+			<!-- /Configuração Hibernate SGBD PostgreSQL -->
+			
 			<!-- Configuração do Pool de conexões Hibernate -->
 			<property name="hibernate.c3p0.min_size" value="5" />
 			<property name="hibernate.c3p0.max_size" value="20" />

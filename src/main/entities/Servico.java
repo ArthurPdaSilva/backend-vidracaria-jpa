@@ -28,17 +28,7 @@ public class Servico implements Serializable{
 
 	@EmbeddedId
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Servico idServico;
-	
-	@EmbeddedId
-	@ManyToMany
-	@JoinColumn(name = "ID_EMPREGADO")
-	private Empregado idEmpregado;
-	
-	@EmbeddedId
-	@ManyToMany
-	@JoinColumn(name = "ID_CLIENTE")
-	private Cliente idCliente;
+	private ServicoId idServico;
 	
 	@OneToOne
 	@JoinColumn(name = "ID_PREJECAO")
@@ -63,13 +53,11 @@ public class Servico implements Serializable{
 	
 	public Servico() {}
 	
-
-
-	public Servico getIdServico() {
+	public ServicoId getIdServico() {
 		return idServico;
 	}
 
-	public void setIdServico(Servico idServico) {
+	public void setIdServico(ServicoId idServico) {
 		this.idServico = idServico;
 	}
 
@@ -103,22 +91,6 @@ public class Servico implements Serializable{
 
 	public void setQuantidadeVidros(int quantidadeVidros) {
 		this.quantidadeVidros = quantidadeVidros;
-	}
-
-	public Empregado getIdEmpregado() {
-		return idEmpregado;
-	}
-
-	public void setIdEmpregado(Empregado idEmpregado) {
-		this.idEmpregado = idEmpregado;
-	}
-
-	public Cliente getIdCliente() {
-		return idCliente;
-	}
-
-	public void setIdCliente(Cliente idCliente) {
-		this.idCliente = idCliente;
 	}
 
 	public Projecao getIdProjecao() {

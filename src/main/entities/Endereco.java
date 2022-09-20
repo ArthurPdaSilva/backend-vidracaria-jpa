@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
@@ -13,7 +14,7 @@ public class Endereco implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@EmbeddedId
+	@Id
 	@ManyToOne
 	@JoinColumn
 	private Cliente idCliente;

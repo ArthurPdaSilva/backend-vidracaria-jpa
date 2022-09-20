@@ -1,7 +1,5 @@
 package entities;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -11,9 +9,8 @@ import javax.persistence.Id;
 
 @Embeddable
 @Entity(name = "CLIENTE")
-public class Cliente implements Serializable {
+public class Cliente {
 
-	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -62,5 +59,4 @@ public class Cliente implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 }
