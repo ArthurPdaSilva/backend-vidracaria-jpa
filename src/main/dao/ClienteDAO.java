@@ -87,7 +87,7 @@ public class ClienteDAO extends DAO{
 		EntityManager em = getEntityManager();
 		List<Cliente> resultado = null;
 		try {
-			TypedQuery<Cliente> query = em.createQuery("SELECT u FROM User u", Cliente.class);
+			TypedQuery<Cliente> query = em.createQuery("SELECT u FROM Cliente u", Cliente.class);
 			resultado = query.getResultList();
 		} catch (Exception e) {
 			e.printStackTrace();
