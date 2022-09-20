@@ -20,12 +20,12 @@ public class Possui implements Serializable{
 	@ManyToMany
 	@JoinColumn
 	@EmbeddedId
-	private Empregado idEmpregado;
+	private Servico idEmpregado;
 	
 	@ManyToMany
 	@JoinColumn
 	@EmbeddedId
-	private Cliente idCliente;
+	private Servico idCliente;
 	
 	@ManyToMany
 	@JoinColumn

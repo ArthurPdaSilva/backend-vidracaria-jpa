@@ -1,7 +1,9 @@
 package enumerables;
 
 public enum Status {
+	
+	Aguardando,
+	EmExecucao,
+	Finalizado
 
-	// TIPOS STATUS AQUI
-	// COLOQUEI ENUM PARA STATUS PARA ADICIONAR A ANOTATION ENUMERATED
 }
