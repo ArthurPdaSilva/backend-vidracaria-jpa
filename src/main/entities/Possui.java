@@ -42,19 +42,19 @@ public class Possui implements Serializable{
 		this.idServico = idServico;
 	}
 
-	public Empregado getIdEmpregado() {
+	public Servico getIdEmpregado() {
 		return idEmpregado;
 	}
 
-	public void setIdEmpregado(Empregado idEmpregado) {
+	public void setIdEmpregado(Servico idEmpregado) {
 		this.idEmpregado = idEmpregado;
 	}
 
-	public Cliente getIdCliente() {
+	public Servico getIdCliente() {
 		return idCliente;
 	}
 
-	public void setIdCliente(Cliente idCliente) {
+	public void setIdCliente(Servico idCliente) {
 		this.idCliente = idCliente;
 	}
 
