@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -19,11 +20,11 @@ public class Telefone implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@EmbeddedId
 	@ManyToOne
 	@JoinColumn
 	private Cliente idCliente;
 	
-	@Id
 	@Column(nullable = false, name = "NUMERO", unique = true)
 	private String numero;
 	
