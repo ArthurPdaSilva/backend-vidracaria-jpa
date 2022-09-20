@@ -8,10 +8,10 @@ import javax.persistence.TypedQuery;
 
 import entities.Cliente;
 
-
-
 public class ClienteDAO extends DAO{
+	
 	public void save(Cliente cliente) throws Exception {
+		
 		EntityManager em = getEntityManager();
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
@@ -97,4 +97,5 @@ public class ClienteDAO extends DAO{
 		}
 		return resultado;
 	}
+	
 }

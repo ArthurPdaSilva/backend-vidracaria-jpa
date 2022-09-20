@@ -1,5 +1,7 @@
 package entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -9,8 +11,13 @@ import javax.persistence.Id;
 
 @Embeddable
 @Entity(name = "CLIENTE")
-public class Cliente {
+public class Cliente implements Serializable{
 
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -30,10 +37,6 @@ public class Cliente {
 
 	public int getIdCliente() {
 		return idCliente;
-	}
-
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
 	}
 
 	public String getNome() {
