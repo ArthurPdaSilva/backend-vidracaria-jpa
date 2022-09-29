@@ -1,0 +1,15 @@
+br\edu\ifpb\mt\dac\DacException.class
+br\edu\ifpb\mt\dac\entities\Pessoa.class
+enumerables\Status.class
+br\edu\ifpb\mt\dac\entities\Servico.class
+br\edu\ifpb\mt\dac\entities\Acessorio.class
+br\edu\ifpb\mt\dac\entities\Projecao.class
+br\edu\ifpb\mt\dac\dao\ClienteDAO.class
+br\edu\ifpb\mt\dac\MainSave.class
+br\edu\ifpb\mt\dac\entities\Endereco.class
+br\edu\ifpb\mt\dac\entities\Empregado.class
+br\edu\ifpb\mt\dac\entities\ServicoId.class
+br\edu\ifpb\mt\dac\entities\Telefone.class
+br\edu\ifpb\mt\dac\dao\PersistenciaDacException.class
+br\edu\ifpb\mt\dac\dao\DAO.class
+br\edu\ifpb\mt\dac\entities\Cliente.class
