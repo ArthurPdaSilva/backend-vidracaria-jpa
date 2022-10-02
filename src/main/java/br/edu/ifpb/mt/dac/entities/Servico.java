@@ -1,31 +1,49 @@
 package br.edu.ifpb.mt.dac.entities;
 
 import java.time.LocalDate;
-
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import enumerables.Status;
 
 
 @Embeddable
-@Entity
+@Entity(name = "SERVICO")
 public class Servico{
 
-
-
-	@EmbeddedId
+	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private ServicoId idServico;
+	private int idServico;
 	
-	@Column(nullable = false, name = "ID_PROJECAO")
+	@Basic
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+	@JoinColumn(name = "EMPREGADO_FK_PK")
+	private Empregado idEmpregado;
+	
+	@Basic
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+	@JoinColumn(name = "CLIENTE_FK_PK")
+	private Cliente idCliente;
+	
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+	@JoinColumn(name = "ID_PROECAO")
 	private Projecao idProjecao;
+	
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+	@JoinColumn(nullable = true, name = "ACESSORIO_FK")
+	private Acessorio acessorio;
 	
 	@Column(nullable = false, name = "STATUS_SERVICO")
 	@Enumerated(EnumType.STRING)
@@ -35,15 +53,49 @@ public class Servico{
 	private LocalDate data;
 	
 	@Column(nullable = false , name = "MEDIDAS_LOCAL")
-	private float Medidas_do_local;
-	
-	@Column(nullable = false, name = "PRECO_DE_FABRICA")
-	private float precoDeFabrica;
-	
-	@Column(nullable = false, name = "QUANTIDADE_VIDROS")
-	private int quantidadeVidros;
+	private float MedidasDoLocal;
 	
 	public Servico() {}
+
+	public int getIdServico() {
+		return idServico;
+	}
+
+	public void setIdServico(int idServico) {
+		this.idServico = idServico;
+	}
+
+	public Empregado getIdEmpregado() {
+		return idEmpregado;
+	}
+
+	public void setIdEmpregado(Empregado idEmpregado) {
+		this.idEmpregado = idEmpregado;
+	}
+
+	public Cliente getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(Cliente idCliente) {
+		this.idCliente = idCliente;
+	}
+
+	public Projecao getIdProjecao() {
+		return idProjecao;
+	}
+
+	public void setIdProjecao(Projecao idProjecao) {
+		this.idProjecao = idProjecao;
+	}
+
+	public Acessorio getAcessorio() {
+		return acessorio;
+	}
+
+	public void setAcessorio(Acessorio acessorio) {
+		this.acessorio = acessorio;
+	}
 
 	public Status getStatus() {
 		return status;
@@ -61,37 +113,15 @@ public class Servico{
 		this.data = data;
 	}
 
-	public float getMedidas_do_local() {
-		return Medidas_do_local;
+	public float getMedidasDoLocal() {
+		return MedidasDoLocal;
 	}
 
-	public void setMedidas_do_local(float medidas_do_local) {
-		Medidas_do_local = medidas_do_local;
+	public void setMedidasDoLocal(float medidasDoLocal) {
+		MedidasDoLocal = medidasDoLocal;
 	}
 
-	public float getPrecoDeFabrica() {
-		return precoDeFabrica;
-	}
 
-	public void setPrecoDeFabrica(float precoDeFabrica) {
-		this.precoDeFabrica = precoDeFabrica;
-	}
-
-	public int getQuantidadeVidros() {
-		return quantidadeVidros;
-	}
-
-	public void setQuantidadeVidros(int quantidadeVidros) {
-		this.quantidadeVidros = quantidadeVidros;
-	}
-
-	public ServicoId getIdServico() {
-		return idServico;
-	}
-
-	public Projecao getIdProjecao() {
-		return idProjecao;
-	}
 
 	
 	

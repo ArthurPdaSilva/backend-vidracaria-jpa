@@ -5,8 +5,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
-
-import br.edu.ifpb.mt.dac.entities.Acessorio;
 import br.edu.ifpb.mt.dac.entities.Empregado;
 
 public class EmpregadoDAO extends DAO{

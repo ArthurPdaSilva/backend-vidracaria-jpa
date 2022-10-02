@@ -7,14 +7,8 @@ import javax.persistence.Entity;
 @DiscriminatorValue("B")
 public class Cliente extends Pessoa {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2225815404632585541L;
 
-
-	
 	public Cliente() {}
-
 	
 }

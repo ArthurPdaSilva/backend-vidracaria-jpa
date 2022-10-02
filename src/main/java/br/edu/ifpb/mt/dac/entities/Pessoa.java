@@ -1,14 +1,12 @@
 package br.edu.ifpb.mt.dac.entities;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorType;
 import javax.persistence.DiscriminatorValue;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -25,43 +23,40 @@ import javax.persistence.OneToOne;
 @DiscriminatorValue("A")
 public class Pessoa implements Serializable  {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2300838368307035239L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(name = "ID_PESSOA")
-	private int id_pessoa;
+	private int idPessoa;
 	
 	@Column(nullable = false, name = "NOME")
 	private String nome;
 	
 	@Column(nullable = false, name = "CPF", length = 11, unique = true)
-	private BigInteger cpf;
+	private Long cpf;
 	
 	@Column(nullable = false, name = "RG", length = 9, unique = true)
-	private BigInteger rg;
+	private Long rg;
 	
 	@Column(nullable = false, name = "EMAIL_CONTATO", unique = true)
-	private String email_contato;
+	private String emailContato;
 	
-	@Embedded
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+	@JoinColumn(name = "TELEFONE_FK")
 	private Telefone telefone;
 	
-	@OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-	@JoinColumn(name = "ENDERECO_FK", nullable = false)
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+	@JoinColumn(name = "ENDERECO_FK")
 	private Endereco endereco;
 	
 	public Pessoa() {}
 
 	public int getId_pessoa() {
-		return id_pessoa;
+		return idPessoa;
 	}
 
 	public void setId_pessoa(int id_pessoa) {
-		this.id_pessoa = id_pessoa;
+		this.idPessoa = id_pessoa;
 	}
 
 	public String getNome() {
@@ -72,28 +67,28 @@ public class Pessoa implements Serializable  {
 		this.nome = nome;
 	}
 
-	public BigInteger getCpf() {
+	public long getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(BigInteger i) {
+	public void setCpf(Long i) {
 		this.cpf = i;
 	}
 
-	public BigInteger getRg() {
+	public Long getRg() {
 		return rg;
 	}
 
-	public void setRg(BigInteger rg) {
+	public void setRg(Long rg) {
 		this.rg = rg;
 	}
 
 	public String getEmail_contato() {
-		return email_contato;
+		return emailContato;
 	}
 
 	public void setEmail_contato(String email_contato) {
-		this.email_contato = email_contato;
+		this.emailContato = email_contato;
 	}
 
 	public Telefone getTelefone() {

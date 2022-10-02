@@ -1,30 +1,20 @@
 package br.edu.ifpb.mt.dac.entities;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity(name = "ENDERECO")
 public class Endereco implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 5909913417369209860L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(nullable = false, name = "ID_ENDERECO")
-	private int id_endreco;
-	
-	@OneToOne(fetch = FetchType.EAGER, mappedBy = "endereco")
-	private Pessoa pessoa;
+	private int idEndreco;
 	
 	@Column(nullable = false, name = "CIDADE")
 	private String cidade;
@@ -44,19 +34,11 @@ public class Endereco implements Serializable {
 	public Endereco() {}
 
 	public int getId_endreco() {
-		return id_endreco;
+		return idEndreco;
 	}
 
 	public void setId_endreco(int id_endreco) {
-		this.id_endreco = id_endreco;
-	}
-
-	public Pessoa getPessoa() {
-		return pessoa;
-	}
-
-	public void setPessoa(Pessoa pessoa) {
-		this.pessoa = pessoa;
+		this.idEndreco = id_endreco;
 	}
 
 	public String getCidade() {
@@ -98,4 +80,12 @@ public class Endereco implements Serializable {
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
+
+	@Override
+	public String toString() {
+		return "Endereco [id_endreco=" + idEndreco + ", cidade=" + cidade + ", rua=" + rua + ", bairro=" + bairro
+				+ ", cep=" + cep + ", complemento=" + complemento + "]";
+	}
+	
+	
 }

@@ -5,8 +5,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
-
-import br.edu.ifpb.mt.dac.entities.Servico;
 import br.edu.ifpb.mt.dac.entities.Telefone;
 
 public class TelefoneDAO extends DAO{

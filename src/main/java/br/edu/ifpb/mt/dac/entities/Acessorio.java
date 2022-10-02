@@ -1,7 +1,6 @@
 package br.edu.ifpb.mt.dac.entities;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,9 +10,6 @@ import javax.persistence.Id;
 @Entity(name = "ACESSORIO")
 public class Acessorio implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -7934643889563207677L;
 
 	@Id
@@ -52,4 +48,10 @@ public class Acessorio implements Serializable{
 		this.nome = nome;
 	}
 
+	@Override
+	public String toString() {
+		return "Acessorio [idAcessorio=" + idAcessorio + ", modelo=" + modelo + ", nome=" + nome +"]";
+	}
+
+	
 }
