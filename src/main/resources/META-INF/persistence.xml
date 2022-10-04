@@ -15,7 +15,6 @@
 		<class>br.edu.ifpb.mt.dac.entities.Projecao</class>
 		<class>br.edu.ifpb.mt.dac.entities.Servico</class>
 		<class>br.edu.ifpb.mt.dac.entities.Telefone</class>
-		<class>br.edu.ifpb.mt.dac.entities.ServicoId</class>
 
 		<properties>
 		
