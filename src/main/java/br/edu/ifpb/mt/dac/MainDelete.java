@@ -16,7 +16,7 @@ public class MainDelete {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			sDao.close();
+			//sDao.close();
 		}
 		
 		try {
