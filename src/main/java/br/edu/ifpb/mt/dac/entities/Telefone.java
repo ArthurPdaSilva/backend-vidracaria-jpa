@@ -22,7 +22,7 @@ public class Telefone implements Serializable {
 	private Pessoa pessoa;
 	
 	@Column(nullable = false, name = "NUMERO", length = 11)
-	public Long numero;
+	private Long numero;
 	
 	public Telefone() {}
 	
